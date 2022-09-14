@@ -20,9 +20,9 @@ public class Program {
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.print("Enter file full path: ");
 			String path = sc.nextLine();
-			System.out.println("Enter salary: ");
+			System.out.print("Enter salary: ");
 			Double salaryTarget = sc.nextDouble();
-			System.out.println("Email of people whose salary is more than "+Double.toString(salaryTarget));
+			System.out.println("Email of people whose salary is more than "+ String.format("%.2f", salaryTarget)+":");
 			try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 
 				String line = br.readLine();
